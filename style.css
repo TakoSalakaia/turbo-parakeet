@@ -144,3 +144,59 @@ button#add-new-user:hover {
 	margin-top: 10px;
 	text-align: center;
 }
+
+.thank-you-banner {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: linear-gradient(90deg, #ff69b4, #ffcccb);
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 30px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+	animation: fadeInUp 2s ease forwards, pulse 2s infinite;
+	z-index: 2000;
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translate(-50%, 50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(-50%, 0);
+	}
+}
+
+@keyframes pulse {
+	0%, 100% {
+		box-shadow: 0 0 10px #ff69b4;
+	}
+	50% {
+		box-shadow: 0 0 20px #ff1493;
+	}
+}
+
+@keyframes floatHearts {
+	0% {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-200px) scale(1.5);
+		opacity: 0;
+	}
+}
+
+.heart {
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	font-size: 24px;
+	animation: floatHearts 3s ease-in-out infinite;
+}
+
