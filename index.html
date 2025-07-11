@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>User Management</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<h1>User Management</h1>
+	
+	<button id="add-new-user">New User</button>
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Personal ID</th>
+				<th>Phone</th>
+				<th>ZIP</th>
+				<th>Gender</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody id="user-body"></tbody>
+	</table>
+
+	<!-- Modal -->
+	<div id="user-dialog" class="modal">
+		<form id="registration-form">
+			<input type="hidden" id="user-id" />
+
+			<input type="text" id="user-name" placeholder="First Name" required />
+			<input type="text" id="user-surname" placeholder="Last Name" required />
+			<input type="email" id="user-email" placeholder="Email" required />
+			<input type="text" id="user-phone" placeholder="Phone" required />
+			<input type="text" id="user-personal-id" placeholder="Personal ID" required />
+			<input type="text" id="user-zip-code" placeholder="ZIP" required />
+
+			<div>
+				<label><input type="radio" name="gender" value="male" required /> Male</label>
+				<label><input type="radio" name="gender" value="female" required /> Female</label>
+			</div>
+
+			<div>
+				<button type="submit">Submit</button>
+				<button type="button" id="close">Close</button>
+			</div>
+		</form>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
